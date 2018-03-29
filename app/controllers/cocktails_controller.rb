@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @dose_list = Dose.where(cocktail: @cocktail)
   end
 
   def new
