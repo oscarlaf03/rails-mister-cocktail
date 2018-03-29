@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+
+h1{
+  text-align:center;
+}
+.card-margin {
+  margin:7px;
+  padding:5px;
+}
+
+.centered-box {
+  width:100%;
+  height: auto;
+  margin:5px;
+  padding:50px;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+

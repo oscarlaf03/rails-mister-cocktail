@@ -1,1 +1,20 @@
-<h1>Cocktails#Index</h1>
+<%= render './share/banner'  %>
+<h1 id="drink-menu">Today's selection</h1>
+<div class='centered-box'>
+  <%= link_to 'Create your cocktail', new_cocktail_path, class: 'btn btn-primary btn-lg'  %>
+</div>
+<div class="row organize-cards-layout">
+  <% @cocktails.each do |cocktail|  %>
+    <div class="col-xs-12 col-sm-4 ">
+      <div class="card card-margin" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/200/300/?random');">
+        <div class="card-category">Most ordered</div>
+        <div class="card-description">
+          <h2><%= cocktail.name  %></h2>
+          <p><%= cocktail.description  %></p>
+        </div>
+        <%= link_to '',cocktail_path(cocktail), class: "card-link"  %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
