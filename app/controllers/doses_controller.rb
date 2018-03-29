@@ -44,6 +44,12 @@ class DosesController < ApplicationController
     @ingredient = Ingredient.find(params[:ingredient_id])
   end
 
+  def list_ingredients
+    list = []
+    Ingredient.all.each {|n| list << n.name}
+    return list
+  end
+
 
 
 end
