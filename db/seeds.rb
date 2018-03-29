@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+counter = 0
+20.times do
+  counter +=1
+  a_drink = Cocktail.new(name: "Drink #{counter}").save
+end
