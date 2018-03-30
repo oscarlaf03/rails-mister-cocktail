@@ -9,5 +9,11 @@
   </li>
   <% end %>
 </ul>
+<%= link_to 'Edit', edit_cocktail_path(@cocktail),class: 'btn btn-success btn-lg' %>
+<%= link_to 'Delete', cocktail_path(@cocktail), method: :delete,data: { confirm: "Are you sure?" },class: 'btn btn-danger btn-lg' %>
+<h2>Add a mix to this cocktail</h2>
+<%= render './doses/form', dose: @dose %>
 
-<%= link_to 'Back', root_path, class: 'btn btn-primary btn-lg'  %>
+
+
+

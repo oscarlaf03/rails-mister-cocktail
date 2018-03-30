@@ -1,0 +1,7 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+<%= f.input :description %>
+<%= f.input :ingredient, collection: @ingredients_options %>
+<% a = '<i class="fa fa-plus fa-xs"></i> Add dose' %>
+<%= link_to '<i class="fa fa-arrow-left fa-xs"></i> Back'.html_safe, root_path, class: 'btn btn-primary btn-lg'  %>
+<%= f.submit class: 'btn btn-success btn-lg', value: '+ Add dose' %>
+<% end %>
