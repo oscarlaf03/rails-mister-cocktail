@@ -1,0 +1,8 @@
+<%= simple_form_for@cocktail, wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+  <!-- [...] -->
+
+  <%= f.input :photo, class: 'btn btn-info btn-xs' %>
+  <%= f.submit value: 'Send photo', class:  'btn btn-success btn-lg '%>
+  <%= f.input :photo_cache, as: :hidden %>
+  <!-- [...] -->
+<% end %>

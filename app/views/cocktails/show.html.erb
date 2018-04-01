@@ -11,6 +11,16 @@
 </ul>
 <%= link_to 'Edit', edit_cocktail_path(@cocktail),class: 'btn btn-success btn-lg' %>
 <%= link_to 'Delete', cocktail_path(@cocktail), method: :delete,data: { confirm: "Are you sure?" },class: 'btn btn-danger btn-lg' %>
+
+<% if !@cocktail[:photo].nil? %>
+  <h2>User's photos</h2>
+  <div class="photo-container">
+    <%= cl_image_tag( @cocktail.photo, width: 400, height: 300, crop: :fill) %>
+  </div>
+<% end %>
+
+<h2>Upload your drink's photos</h2>
+<%= render 'form_photo', cocktail: @cocktail %>
 <h2>Add a mix to this cocktail</h2>
 <%= render './doses/form', dose: @dose %>
 
